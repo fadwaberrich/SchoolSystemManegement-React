@@ -5,7 +5,8 @@ import Loadable from 'components/Loadable';
 import MainLayout from 'layout/MainLayout';
 
 // render - dashboard
-const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
+const TeacherList = Loadable(lazy(() => import('pages/dashboard/TeacherList')));
+const StudentList = Loadable(lazy(() => import('pages/dashboard/StudentList')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -17,11 +18,11 @@ const MainRoutes = {
       children: [
         {
           path: 'teacher-list',
-          element: <DashboardDefault />
+          element: <TeacherList />
         },
         {
           path: 'student-list',
-          element: <DashboardDefault />
+          element: <StudentList />
         }
       ]
     }
